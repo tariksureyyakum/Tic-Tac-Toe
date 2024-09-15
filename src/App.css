@@ -1,38 +1,72 @@
+h1 {
+color: #6600ff;
+font-family: 'Courier New', Courier, monospace;
+font-size: 40px;
+font-weight: bold;
+}
+
+/* src/App.css */
 .App {
   text-align: center;
+  background-color: #eaff00;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.status {
+  margin-bottom: 25px;
+  color: #6600ff;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.board-row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-left: 450px;
+  border-color: rgb(1, 255, 255);
+}
+
+.square {
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  border: 1px solid #6600ff;
+  float: left;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 60px;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 6px;
+  margin-bottom: 6px;
+}
+.winner-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 2px solid #000;
+  padding: 20px;
+  z-index: 100;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.winner-popup p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.winner-popup button {
+  padding: 10px 20px;
+  background-color: #3498db;
   color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.winner-popup button:hover {
+  background-color: #2980b9;
 }
